@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+        (function (e, b) {
+            if (!b.__SV) {
+                var a, f, i, g; window.mixpanel = b; a = e.createElement("script"); a.type = "text/javascript"; a.async = !0; a.src = ("https:" === e.location.protocol ? "https:" : "http:") + '//cdn.mxpnl.com/libs/mixpanel-2.2.min.js'; f = e.getElementsByTagName("script")[0]; f.parentNode.insertBefore(a, f); b._i = []; b.init = function (a, e, d) {
+                    function f(b, h) { var a = h.split("."); 2 == a.length && (b = b[a[0]], h = a[1]); b[h] = function () { b.push([h].concat(Array.prototype.slice.call(arguments, 0))) } } var c = b; "undefined" !==
+                    typeof d ? c = b[d] = [] : d = "mixpanel"; c.people = c.people || []; c.toString = function (b) { var a = "mixpanel"; "mixpanel" !== d && (a += "." + d); b || (a += " (stub)"); return a }; c.people.toString = function () { return c.toString(1) + ".people (stub)" }; i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" "); for (g = 0; g < i.length; g++) f(c, i[g]);
+                    b._i.push([a, e, d])
+                }; b.__SV = 1.2
+            }
+        })(document, window.mixpanel || []);
+        mixpanel.init("5faddad2a0b95e6504ffe5ad740486d6");</script>
+    <!-- end Mixpanel -->
+
+</head>
+<body>
+    <header>
+        <div id="LoginBar">
+            @Html.Partial("_LoginPartial")
+        </div>
+        <div id="MenuBar">
+            <div id="title">
+                @Html.ActionLink("CRANKY JANE'S", "Index", "Home")
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @if (ViewContext.HttpContext.User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Your Account", "Manage", "Account")</li>
+                        <li>@Html.ActionLink("My Listings", "MyListings", "Listings")</li>
+                        if (ViewBag.Title != "NewItem")
+                        {
+                            <li>@Html.ActionLink("List an Item", "Create", "Listings")</li>
+                        }
+                    }
+                    <li>@Html.ActionLink("University Search", "Index", "Listings")</li>
+                    <li>@Html.ActionLink("Contact Cranky Jane", "Contact", "Home")</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+
+        <div id="RecentNews">
+            <div id="recentTweets" class="footerGroup">
+                <div class="footertitle">Recent Tweets</div>
+                <div class="footertwitter">
+                <ul>
+                    <li>500 visitors in our first week. Don't miss out on the student exchange people are talking about at crankyjanes.com</li>
+                    <li>Cranky Jane's student-to-student exchange launched. Check it out at crankyjanes.com!</li>
+                    <li>Use coupon code IMCRANKY for a free one-month trial of Cranky Pro!</li>
+                    </ul>
+                    </div>
+            </div>
+            <div id="recentPosts" class="footerGroup">
+                <div class="footertitle">Recent Posts</div>
+                <div class="footerblog"><ul>
+                <li><a href="">Scaling with traffic: how we've handled growth.</a></li>
+                <li><a href="">Coming soon: new product categories.</a></li>
+                <li><a href="">20 new campuses added!</a></li>
+                <li><a href="">Early adopter endorsements and referral program.</a></li>
+                </ul>
+                    </div>
+            </div>
+    </div>
+    <footer>
+        <div id="copyright">
+            <div>
+                <span>&copy; All Rights Reserved Cranky Jane's.</span>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="~/Scripts/CustomValidationImport.js"></script>
+</body>
+</html>

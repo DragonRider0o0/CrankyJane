@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrankyJanes.WebUI", "CrankyJanes.WebUI\CrankyJanes.WebUI.csproj", "{5B359F93-AF43-4677-8FDA-11C97CE53F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrankyJanes.Core", "CrankyJanes.Core\CrankyJanes.Core.csproj", "{45864007-EF23-43ED-8E5E-C348B90A6A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrankyJanes.Data", "CrankyJanes.Data\CrankyJanes.Data.csproj", "{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{47D2222C-126D-462D-A798-6BC805470A92}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Deploy|Any CPU = Deploy|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Deploy|Any CPU.ActiveCfg = Deploy|Any CPU
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Deploy|Any CPU.Build.0 = Deploy|Any CPU
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Test|Any CPU.ActiveCfg = Deploy|Any CPU
+		{5B359F93-AF43-4677-8FDA-11C97CE53F01}.Test|Any CPU.Build.0 = Deploy|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{45864007-EF23-43ED-8E5E-C348B90A6A30}.Test|Any CPU.Build.0 = Release|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E4B132-5603-4CE7-A8C3-F11DD93ADAF9}.Test|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

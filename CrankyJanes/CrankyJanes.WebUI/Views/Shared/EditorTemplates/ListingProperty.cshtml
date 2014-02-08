@@ -1,0 +1,21 @@
+﻿@model CrankyJanes.Core.ListingProperty
+@{
+    var validationRule = Html.Raw(Json.Encode(Model.ValidationRule));
+}
+<div class="listingProperty" data-validation-rule='@validationRule'>
+    @Html.HiddenFor(model => model.IsRequired)
+    @Html.HiddenFor(model => model.PropertyName)
+    @Html.HiddenFor(model => model.ValidationRuleName)
+
+    <div class="editor-label">
+        @if (Model.IsRequired)
+        {
+            @:*
+}
+@Model.PropertyName
+    </div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.PropertyValue)
+</div>
+<br />
+</div>

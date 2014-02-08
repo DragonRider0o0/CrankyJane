@@ -1,0 +1,45 @@
+﻿<script type="text/javascript">
+    mixpanel.track('Home Page Load');
+</script>
+
+@{
+    ViewBag.Title = "Cranky Jane's";
+}
+@section featured {
+    <section id="mainSection">
+    <div id="search">
+        <span id="searchPrompt">Search</span>
+        <input id="searchInput" type="text" /> 
+        <input id="searchButton" type="button" value=" " onclick='window.location="@Url.Action("SearchResults", "Home")";' />
+    </div>
+    <div id="textbooks"></div>
+</section>
+
+    <section id="aboutSection">
+        <div id="aboutText">
+            <div id="aboutTitle"><img src="/images/divider.png" style="vertical-align:middle;"> About Cranky Jane's <img src="images/divider.png" style="vertical-align:middle;"></div>
+            <div id ="aboutSubText"> 
+                Cranky Jane's was developed by students as a way to stick it to the man—the bookstore that rips students off so bad it makes Jane very cranky.  Cranky Jane's cuts out the middle man.  List your student supplies such as books, electronics, housing contracts or laptops for trade or for some sweet cash.  Cranky Jane will match you up with students on your campus who have the supplies you need to buy or sell. Who knows, you might just make a couple friends.
+            </div>
+        </div>
+        <br />
+        <div id="aboutSteps">
+            <div class="aboutStep">
+                <div class="stepImage"><img style="padding-top:35px;" src="/images/folders.png"></div>
+                <div class="stepTitle">Step 1:</div>
+                <div>Create an Account</div>
+            </div>
+            <div class="aboutStep">
+                <div class="stepImage" ><img style="padding-top:50px;" src="/images/books.png"></div>
+                <div class="stepTitle">Step 2:</div>
+                <div>List Your Books</div>
+            </div>
+            <div class="aboutStep">
+                <div class="stepImage"><img style="padding-top:35px;" src="/images/talking.png"></div>
+                <div class="stepTitle">Step 3:</div>
+                <div>Sell or Trade Books</div>
+            </div>
+        </div>
+    </section>
+
+}

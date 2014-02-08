@@ -1,0 +1,287 @@
+﻿html, body 
+{
+    margin: 0px;
+    padding:0px;
+}
+#main 
+{
+    height: 500px;
+    
+}
+#about
+{
+    height: 400px;
+    
+}
+
+.subSection
+{
+
+    border: solid 5px black;
+    margin: 10px;
+}
+
+header 
+{
+    background-color: #FFFFFF;
+}
+
+#LoginBar
+{
+    width: 70%;
+    /*height: 36px;*/
+    padding: 0px;
+    list-style-type:none;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-top:  1px solid #e6e6e6;
+}
+
+#LoginBar ul
+{
+    height: inherit;
+    float: left;
+    width: 250px;
+    padding: 0px;
+    list-style-type:none;
+    margin:0px;
+}
+
+#LoginBar li
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right:8px;
+    font-family: Calibri;
+    font-size: 16px;
+    height: inherit;
+    width: 75px;
+    float: left;
+    border-right: 1px solid #e6e6e6; 
+    text-align:center;
+}
+
+#LoginBar li:first-child 
+{
+    margin-left: 20%;
+    height: inherit;
+    border-left: 1px solid #e6e6e6;
+}
+
+#LoginBar #UserLoggedIn {
+    float: inherit;
+    display: inline-block;
+}
+
+#LoginBar a 
+{
+    color:#4d4d4d;
+    height: inherit;
+    text-decoration:none;
+}
+
+#LoginBar img
+{
+    position: relative;
+    top: -2px;
+    margin-right: 7px;
+}
+
+#SocialMediaLinks 
+{
+    text-align:center;
+    float: right;
+    border-right: 1px solid #e6e6e6; 
+    border-left: 1px solid #e6e6e6; 
+    height: inherit;
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
+#SocialMediaLinks img
+{
+   height:20px;
+}
+
+body 
+{
+    min-width: 1200px;
+}
+
+#MenuBar 
+{
+    background-color: #FEFEFE;
+    background-image: url("/Images/lightBackground.png");
+    background-repeat: repeat;
+    height: 102px;
+    width: 98%;
+    display: inline-block;
+    text-align:center;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-top:  1px solid #e6e6e6;
+    border-bottom:  4px solid #98b709;
+    
+}
+
+#MenuBar div
+{
+    /**/
+}
+
+#MenuBar ul, #MenuBar li, #MenuBar nav, #MenuBar div
+{
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: -5px;
+}
+
+#MenuBar div, #MenuBar li
+{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#MenuBar li
+{
+    /**/
+    height: 30px;
+    width: auto;
+    min-width: 64px;
+    font-size: 14px;
+    border-right: 1px solid #e6e6e6; 
+    text-align:center;
+    text-transform:uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    padding-top: 15px;
+}
+
+#MenuBar li:first-child 
+{
+    border-left: 1px solid #e6e6e6;
+}
+
+#MenuBar a 
+{
+    color:#4d4d4d;
+    text-decoration:none;
+    font-weight: bolder;
+}
+
+
+#MenuBar #title 
+{
+    padding-top: 25px;
+    font-size: 44px;
+    text-transform:uppercase;
+    font-family: 'Patua One', cursive;
+}
+
+#copyright 
+{
+    text-align:center;
+    background-color: #1a1a1a;
+    color: #606060;
+    width: 20%;
+    padding-top:20px;
+    height: 50px;
+    font-family: Calibri;
+    font-size: 12px;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+.footerGroup
+{
+    /*height: 150px;*/
+    width: 430px;
+    display:inline-block;
+    color: #e6e6e6;
+    font-size: 13px;
+    font-family:Calibri;
+    text-align:left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footerGroup a
+{
+  padding:0px;
+  color: #98b709;
+  font-family: calibri;
+  text-decoration:none;
+}
+
+.footertitle
+{
+    font-family: 'Patua One', cursive;
+    display:inline-block;
+    color: #EFEFEF;
+    font-size: 20px;
+}
+
+.footertwitter ul
+{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footertwitter ul li
+{
+    background-image: url("/images/twitterfooter.png");
+    background-repeat: no-repeat;
+    background-position: left center; 
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom:10px; 
+}
+
+.footerblog ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footerblog ul li
+{
+    background-repeat: no-repeat;
+    background-position: left center; 
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom:10px;
+    border-bottom:1px solid #242424;
+}
+
+
+body, html, h3
+{
+    /*background-color: #525252;*/
+    background-color: #FEFEFE;
+    background-image: url("/Images/lightBackground.png");
+}
+
+#body {
+    min-height: 490px;
+}
+
+h1 {
+    font-size:18px;
+    margin:0px;
+    font-family: 'Patua One', cursive;
+    font-weight:bold;
+}
+
+h2 {
+    font-size:16px;
+    margin:0px;
+    font-family: 'Roboto Slab', serif;
+    font-weight:normal;
+}
+

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<CrankyJanes.Core.Listing>
+
+@{
+    ViewBag.Title = "MyListings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MyListings</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@foreach (var item in Model)
+{
+    <a href="/Listings/ViewDetails/@item.ID">
+        @Html.Raw(item.ListingProperties.FirstOrDefault(p => p.PropertyName == "Description").PropertyValue);
+    </a>
+    <br />
+}

@@ -1,0 +1,78 @@
+﻿<script type="text/javascript">
+    mixpanel.track('Product Detail Page Load');
+</script>
+
+@{
+    ViewBag.Title = "Cranky Jane's";
+}
+@section featured {
+
+    <div id="mainSection2">
+    <div id="search">
+        <span id="searchPrompt">Search</span>
+        <input id="searchInput" type="text" /> 
+        <input id="searchButton" type="button" value=" " onclick='window.location="@Url.Action("SearchResults", "Home")    ";' />
+    </div>
+    </div>
+
+     <div id="listingSection">
+      <div id="listing">
+      <div id="leftSection">
+        <div id="listingHeader" style="font-size:30px;"><img src="/images/divider2.png" style="float:left;margin-top:15px;margin-left:38px;"> Biology <img src="/images/divider2.png" style="margin-top:15px;float:right;margin-right:38px;"></div>
+        
+          <div class="listing_content_detail">
+              <img src="~/Images/bookbio.png" style="float:left;border-right:0px solid #808080;margin-right:5px;">
+              <div id="productDesc">
+                  
+                  <img src="~/Images/person.png" style="float:left;padding:10px;">
+                  <h1>Sarah Mckinley</h1>
+                  <h2>Biology Major</h2>
+                  <img src="~/Images/horizdivider.png" style="margin-left:15px;">
+
+                  <img src="~/Images/schoolico.png" style="float:left;padding:10px;">
+                  <h1>College</h1>
+                  <h2>Utah Valley University</h2>
+                  <img src="~/Images/horizdivider.png" style="margin-left:15px;">
+
+                  <img src="~/Images/person.png" style="float:left;padding:10px;">
+                  <h1>Reputation</h1>
+                  <h2>Feedback 6+ 1-</h2>
+                  <img src="~/Images/horizdivider.png" style="margin-left:15px;">
+
+                  <img src="~/Images/book.png" style="float:left;padding:10px;">
+                  <h1>Condition</h1>
+                  <h2>New - with access code</h2>
+                  <img src="~/Images/horizdivider.png" style="margin-left:15px;">
+
+                  <img src="~/Images/money.png" style="float:left;padding:10px;">
+                  <h1>Price</h1>
+                  <h2>$30</h2>
+
+              </div>
+              </div>
+          <div class="aboutText" style="text-align:justify;padding:15px;margin-right:15px;">Here is the product description. This will cover the version of the book, the general contents, and the overall condition in more detail. Here is the product description. This will cover the version of the book, the general contents, and the overall condition in more detail. Here is the product description. This will cover the version of the book, the general contents, and the overall condition in more detail.</div>
+
+          <div class="listingTitle" style="text-align:center;"><img src="/images/divider2.png" style="float:left;margin-top:10px;margin-left:38px;"> Seller <img src="/images/divider2.png" style="float:right;margin-top:10px;margin-right:38px;"></div>
+          
+          <div class="aboutText" style="text-align:justify;font-size:12px;margin-right:15px;"><img src="~/Images/student.png" style="float:left;margin-left:15px;margin-right:15px;border:10px solid #ffffff;">
+              <div class="listingTitle" style="margin-top:20px;">
+              <font size="4px" color="#96b707">Student Name</font><br />
+              <font size="2px">University Name</font></div>
+          Description of student by the student or something. Description of student by the student or something. Description of student by the student or something. Description of student by the student or something. Description of student by the student or something.
+          </div>
+
+          <div class="clear"></div>   
+
+          <div class="listingTitle" style="text-align:center;"><img src="/images/divider2.png" style="float:left;margin-top:10px;margin-left:38px;"> Feedback <img src="/images/divider2.png" style="float:right;margin-top:10px;margin-right:38px;"></div>
+          <img src="~/Images/feedback.png" style="align-content:center;padding:15px;">
+      </div>
+          <div id="rightSection" style="align-content:center;">
+              <img src="~/Images/payment.png" style="padding-bottom:10px;padding-top:30px;">
+              <img src="~/Images/getanaccount.png" style="padding-bottom:20px;padding-top:20px;">
+              <img src="~/Images/amazon%20ad.png" />
+          </div>
+          </div>
+
+         </div>
+
+}

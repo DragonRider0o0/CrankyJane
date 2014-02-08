@@ -1,0 +1,77 @@
+﻿@model CrankyJanes.Core.Listing
+@using CrankyJanes.Core
+
+@{
+    ViewBag.Title = "NewItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+<div class="editor-label">
+    Category
+</div>
+<div class="editor-field">
+    <select id="categoryDropDownList">
+        @foreach (Category category in ViewBag.categories)
+        {
+            <option value="@category.ID">@category.CategoryName</option>
+        }
+    </select>
+</div>
+
+<div id="dynamicProperties">
+    @Html.Partial("_PropertyFields")
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@*<input class="text-box single-line" id="ListingProperties_0__PropertyValue" name="ListingProperties[0].PropertyValue" type="text" value="">*@
+@*<input id="ListingProperties_0__ValidationRuleName" name="ListingProperties[0].ValidationRuleName" type="hidden" value="Dollars">*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/knockout")
+    <script type="text/javascript">
+        $(function () {
+            $('#categoryDropDownList').on('change', function (event) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Listings/UpdateProperties?id=" + $('#categoryDropDownList').val(),
+                    success: function (html) {
+                        $('#dynamicProperties').html(html);
+                        var form = $('#dynamicProperties').find('form').first();
+
+                        var ruleObj = { rules: {}, messages: {} };
+                        var propDivs = $("div.listingProperty");
+                        for (var i = 0; i < propDivs.length; ++i) {
+                            var inputElementSelector = "input[name='ListingProperties[" + i + "].PropertyValue'";
+                            var inputElement = $(inputElementSelector);
+                            var ruleName = inputElement.attr("name");
+
+                            var validationRule = $.parseJSON($(propDivs[i]).attr('data-validation-rule'));
+
+                            var isApplicable = false;
+                            var methodList = {};
+                            if (validationRule != null && validationRule.Name != "Required") {
+                                methodList.required = true;
+                                isApplicable = true;
+                                ruleObj.messages.required = validationRule.Message;
+                            }
+                            if (validationRule != null && validationRule.Name != "Required") {
+                                methodList["regex"] = validationRule.ValidationRegex;
+                                isApplicable = true;
+                            }
+
+                            if (isApplicable) {
+                                ruleObj.rules[ruleName] = methodList;
+                                ruleObj.messages[ruleName] = validationRule.Message;
+                            }
+                        }
+
+                        form.validate(ruleObj);
+                    }
+                });
+            });
+        });
+    </script>
+}

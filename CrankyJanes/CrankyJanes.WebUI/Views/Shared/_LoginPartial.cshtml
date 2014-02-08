@@ -1,0 +1,26 @@
+﻿@if (Request.IsAuthenticated) {
+    <div id="UserLoggedIn" class ="float-left">
+        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }
+    </div>
+    <div id ="SocialMediaLinks">
+       <img src="/Images/twitter.png" />
+        <img src="/Images/google.png" />
+        <img src="/Images/facebook.png" />
+        <img src="/Images/pintrest.png" />
+    </div>
+} else {
+    <ul   class ="float-left">
+        <li><img src="~/Images/loginBullet.png" />@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li><img src="~/Images/loginBullet.png" />@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+    </ul>
+    <div id ="SocialMediaLinks">
+       <img src="/Images/twitter.png" />
+        <img src="/Images/google.png" />
+        <img src="/Images/facebook.png" />
+        <img src="/Images/pintrest.png" />
+    </div>
+}

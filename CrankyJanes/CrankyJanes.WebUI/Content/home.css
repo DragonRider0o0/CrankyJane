@@ -1,0 +1,305 @@
+﻿#mainSection 
+{
+    height:678px;
+    width: 100%;
+    border-bottom: solid 4px #98b709;
+    background-color: #525252;
+    padding:0px;
+    margin: 0px;
+    display:inline-block;
+}
+
+
+#mainSection2
+{
+    width: 100%;
+    border-top: solid 0px #98b709;
+    background-color: #525252;
+    padding:0px;
+    margin: 0px;
+    display:inline-block;
+}
+
+#search 
+{
+    width: 100%;
+    height: 78px;
+    text-align: center;
+}
+
+#textbooks 
+{
+    width: 100%;
+    height: 600px;
+    text-align:center;
+    overflow:hidden;
+    font-size:0px;
+    background-image: url("/Images/booksbg.png");
+}
+
+#textbooks .textbook
+{
+    height:200px;
+    width:156px;
+    background-position:top left;
+    background-image: url("/Images/textbook.png");
+    background-repeat: no-repeat;
+    display:inline-block;
+    padding:0px;
+    margin: 0px;
+}
+
+#searchInput 
+{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #383838; 
+    background-image: linear-gradient(to bottom, #161616 0%, #414141 100%);
+    border-radius: 20px;
+    width: 666px;
+    color: #FFFFFF;
+    padding-left: 10px;
+    border: none;
+}
+
+#searchPrompt 
+{
+    margin-top: 20px;
+    font-family: 'Patua One', cursive;
+    font-size: 20px;
+    font-weight: normal;
+    color: #FFFFFF;
+    padding-right:10px;
+}
+
+#searchButton 
+{
+    margin-top: 20px;
+    padding-right:10px;
+    background-color: #adc63b;
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    border: solid 1px #888;
+    background-image: url("/Images/white-search-resize.png");
+    background-repeat: no-repeat;
+    background-position:center; 
+}
+
+#searchButton:hover
+{
+    background-color: #BD4;
+    border: solid 1px #666;
+    cursor:pointer;
+}
+
+#aboutSection 
+{
+    height:588px;
+    width: 100%;
+    background-color: #FEFEFE;
+    background-image: url("/Images/lightBackground.png");
+    background-repeat: repeat;
+    padding:0px;
+    margin: 0px;
+    display:inline-block;
+    text-align:center;
+}
+
+#aboutText 
+{
+    height:225px;
+    width: 940px;
+    display:inline-block;
+    color: #4d4d4d;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+#aboutText  #aboutTitle 
+{
+    text-align: center;
+    font-family: 'Patua One', cursive;
+    font-size: 35px;
+    font-weight: bolder;
+    color: #4d4d4d;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#aboutSteps 
+{
+    height:364px;
+    width: 950px;
+    display:inline-block;
+    text-align:center;
+}
+
+.aboutStep 
+{
+    height: 295px;
+    width: 300px;
+    border-radius: 5px;
+    display:inline-block;
+    border: solid 1px #AAA;
+    border-bottom: solid 3px #98b709; 
+    background-color: #FFF;
+    color: #98b709;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.stepImage
+{
+    height:175px;
+    width: 170px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #98b709;
+}
+
+.stepTitle 
+{
+    font-family: 'Patua One', cursive;
+    font-weight:normal;
+    color: #4d4d4d;
+    font-size: 25px;
+    padding-top:15px;
+}
+
+#aboutSubText 
+{
+    text-align:left;
+}
+
+#RecentNews 
+{
+    height: 200px;
+    background-color: #2f2f2f;
+    background-image: url("/Images/darkBackground.png");
+    background-repeat: repeat;
+    text-align:center;
+    /*display: none;*/
+    display: block;
+}
+
+
+
+#listingHeader {
+    text-align: center;
+    font-family: 'Patua One', cursive;
+    font-size: 20px;
+    font-weight: normal;
+    color: #4d4d4d;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.listingTitle {
+    text-align: left;
+    font-family: 'Patua One', cursive;
+    font-size: 25px;
+    font-weight: normal;
+    color: #4d4d4d;
+    padding: 0px;
+    margin-left:5px;
+}
+
+.listingPrice {
+    font-size:30px;
+    font-family: 'Roboto Slab', serif;
+    color:#97b708;
+    float:right;
+    margin-right:5px;
+}
+
+#listingSection {
+    width: 100%;
+    background-color: #FEFEFE;
+    background-image: url("/Images/lightBackground.png");
+    background-repeat: repeat;
+    padding:0px;
+    margin: 0px;
+    text-align:center;
+}
+
+#listing {
+    width:940px;
+    display: inline-block;
+    color: #4d4d4d;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+.listing_inner {
+    width:100%;
+    display: inline-block;
+    padding-bottom:0px;
+}
+
+#leftSection {
+    width:640px;
+    float:left;
+    padding:0px;
+}
+
+#rightSection {
+    width:300px;
+    float:right;
+    padding:0px;
+    background-color:#eeeeee;
+}
+
+.listing_picture {
+    background-image: url("/Images/bookb.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 117px;
+    width: 92px;
+    float:left;
+    border:10px solid #ffffff;
+    margin-top:5px;
+}
+
+.listing_content {
+    width:490px;
+    float:right;
+    margin:0px;
+    text-align:left;
+    padding:5px;
+    border:1px solid #e7e7e7;
+    background-color:#ffffff;
+    margin-right:20px;
+    margin-top:20px;
+}
+
+
+.listing_content_detail {
+    width:610px;
+    margin:0px auto;
+    min-height:373px;
+    text-align:left;
+    padding:0px;
+    border:1px solid #e7e7e7;
+    background-color:#ffffff;
+    margin-right:20px;
+}
+
+
+.subtext {
+    font-size: 12px;
+    color: #999999;
+    padding-top:2px;
+}
+
+.clear { 
+    clear:both;
+    margin:0px; 
+
+}
+
+#productDesc {
+padding:10px;
+}

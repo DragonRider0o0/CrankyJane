@@ -1,0 +1,22 @@
+﻿@model CrankyJanes.Core.Listing
+@*<form method="post" id="listingPropertiesForm">
+        <div id="listingPropertiesSection" data-bind="foreach: ListingProperties">
+            <label class="propertyLabel"></label>
+            <div>
+                <input class="propertyField" data-bind="value: PropertyValue" />
+            </div>
+        </div>
+        <input type="submit" data-bind="click: Save">Save</input>
+    </form>*@
+
+@if (Model != null)
+{
+    using (Html.BeginForm("Create", "Listings", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.CategoryID)
+        @Html.EditorFor(m => m.ListingProperties)
+        <input type="submit" value="Post Listing" />
+    }
+}
+
+@Scripts.Render("~/bundles/knockout")
